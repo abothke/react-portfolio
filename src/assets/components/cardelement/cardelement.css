@@ -1,0 +1,22 @@
+#card{
+    background: #2A304C;
+    margin: 1em;
+    box-shadow: 0px 0px 10px 5px #1f2231;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+h3{
+    color: #BCBCDC
+}
+
+span{
+    color: #BCBCDC;
+    font-weight: 800;
+}
+
+p{
+    color: #90A0D9
+}

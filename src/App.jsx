@@ -1,33 +1,75 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Button from './assets/components/button/Button'
+import Header from './assets/components/header/Header'
+import CardElement from './assets/components/cardelement/CardElement'
+import Footer from './assets/components/footer/Footer'
+import Tile from './assets/components/tiles/Tile'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    <Header/>
+    <main>
+    <div id='hero-text' className='flex-center-center column'>
+    <h2>Hi, I am <span>John Smith</span></h2>
+    <h3>A Front End Developer</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt recusandae, consequuntur natus dignissimos accusantium nam suscipit numquam facilis voluptates obcaecati?</p>
+    </div>
+    <Button
+    title='resume'
+    section='#resume'
+    />
+    <h2>Projects</h2>
+    <div id="cards">
+    <CardElement
+    title='Project 1'
+    desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, provident.'
+    highlight='JavaScript React Sass'
+        />
+  <CardElement
+    title='Project 2'
+    desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, provident.'
+    highlight='JavaScript React Sass'
+        />
+          <CardElement
+    title='Project 3'
+    desc='Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, provident.'
+    highlight='JavaScript React Sass'
+        />
+        </div>
+        <h2>Skills</h2>
+        <div id='skills' className='flex-center-center'>
+          <Tile
+          skill='HTML'
+          />
+          <Tile
+          skill='css'
+          />
+          <Tile
+          skill='JavaScript'
+          />
+          <Tile
+          skill='React'
+          />
+          <Tile
+          skill='SASS'
+          />
+          <Tile
+          skill='Tailwind CSS'
+          />
+          <Tile
+          skill='Git'
+          />
+          <Tile
+          skill='UX/UI'
+          />
+        </div>
+        <h2>Contact</h2>
+        <Button
+        title='email me'
+        />
+    </main>
+    <Footer/>
     </>
   )
 }
